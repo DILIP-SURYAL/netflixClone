@@ -1,6 +1,7 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from "./Login";
+import Browse from "./Browse";
 const Body = () => {
   const browserRouter = createBrowserRouter([
     {
@@ -12,7 +13,11 @@ const Body = () => {
       element: <Browse />,
     },
   ]);
-  return <div>Body</div>;
+  return (
+    <div>
+      <RouterProvider router={browserRouter} />
+    </div>
+  );
 };
 
 export default Body;
